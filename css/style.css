@@ -1,0 +1,165 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+
+:root {
+    --max-width: 1280px;
+    --min-width: 320px;
+    --accent-color: #00c2ff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Roboto, sans-serif;
+}    
+
+a {
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+}
+
+.book-appointment {
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 24px;
+    width: 17rem;
+}
+
+/* Container */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-width: var(--min-width);
+    background-image: url('../images/auto1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.7s ease-in-out;
+}
+
+.header, .content, .footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: var(--max-width);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+} 
+
+.logo__img {
+    margin-right: 0.5rem;
+}
+
+.menu-list {
+    margin: 0;
+}
+
+.menu-list__item {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 24px;
+}
+
+.menu-list__item:last-child {
+    margin-right: 0;
+}
+
+/* Content */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 2rem;
+    position: relative; 
+}
+
+.slideButton {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.prevSlide {
+    left: -2rem;
+    color: white;
+}
+
+.nextSlide {
+    right: -2rem;
+    color: white;
+}
+
+.content__claim {
+    font-size: 64px;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.content__subclaim {
+    font-size: 36px;
+    margin: 0.5rem 0;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer-wrapper {
+    background-color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__widget {
+    font-size: 24px;
+}
+
+.footer__widget__title {
+    color: var(--accent-color);
+    margin: 0 0 1rem 0;
+}
+
+.footer__widget__text {
+    margin: 0;
+}
+
+/* Responsive staff */
+@media screen and (maw-width: 1280px) {
+    .header, .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        margin-top: 1.5rem;
+    }
+
+    
+    .content {
+        align-items: center;
+    }
+
+    .footer__widget__text {
+        margin-bottom: 1rem;
+    }
+}
